@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    "use strict";
+      var pets = ["dog","cat"];
+      var vehicles = ["cars","bikes","autos"];
+      var items = [pets,vehicles];
+      document.write(items)
+      pets.push("cow,goat,buffalo,parrot"); // add ele at last
+      console.log(items);
+      pets.pop(); // remove ele from last
+      console.log(items);
+      pets.unshift("parrot");//add ele at beginning
+      pets.shift() //remove ele from begining
+      pets.splice(1,0,"parrot");
+      console.log(items[0][2]);
+    </script>
+  </body>
+</html>

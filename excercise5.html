@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <script type="text/javascript">
+        let table = document.createElement('table');
+        let row1 = document.createElement('tr');
+        let row2 = document.createElement('tr');
+        let row3 = document.createElement('tr');
+        row1.innerHTML = `<th>Row 1</th><td>1</td>
+        <td>2</td>
+        <td>3</td>`
+        row2.innerHTML = `<th>Row 2</th><td>4</td>
+        <td>5</td>
+        <td>6</td>`
+        row3.innerHTML = `<th>Row 3</th><td>7</td>
+        <td>8</td>
+        <td>9</td>`
+        table.appendChild(row1);
+        table.appendChild(row2);
+        table.appendChild(row3);
+        document.body.appendChild(table);
+
+
+
+        var div = document.createElement('div');
+        var h1 = document.createElement('h1');
+        h1.innerText = "my first Heading";
+        var p = document.createElement('p');
+        p.innerText = "this is a para"
+        div.appendChild(h1);
+        div.appendChild(p);
+        var article = document.createElement('article');
+        var h1 = document.createElement('h1');
+        h1.innerText = "article first Heading";
+        var p = document.createElement('p');
+        p.innerText = "articlepara";
+        article.appendChild(h1);
+        article.appendChild(p);
+        var aside = document.createElement('aside');
+        var pre = document.createElement('pre');
+        pre.innerText = "aside first Heading";
+        var p = document.createElement('p');
+        p.innerText = "aside para"
+        aside.appendChild(p);
+        aside.appendChild(pre);
+        document.body.appendChild(div);
+        document.body.appendChild(article);
+        document.body.appendChild(aside);
+      </script>
+  </body>
+</html>

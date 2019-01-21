@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        text-align:center;
+        border:4px solid black;
+      }
+      h1{
+        color:green;
+        font-family:arial;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Excercise 1</h1>
+  <script>
+    "use strict";
+    var currentPos = 0;
+    var floornum = +prompt("which floor you want to go:");
+    document.write("which floor u want to go:"+" "+"</br>");
+    document.write("you choose: "+floornum+"</br>");
+    if(floornum <= 5 && floornum != 0){
+      currentPos = floornum;
+      if(currentPos > 0){
+        alert("going up door is open at "+floornum + "floor"+" ");
+         document.write(" door is open at "+floornum+" "+ "floor"+"</br>");
+         floornum = +prompt("which floor you want to go:");
+         document.write("again you choose: "+floornum+"</br>");
+         if(floornum <  currentPos){
+           alert("going down door is open at "+floornum + "floor"+" ");
+           document.write("|"+"</br>");
+           document.write("v"+"</br>");
+            document.write("door is open at "+floornum+" "+ "floor");
+         }else if(floornum > currentPos){
+              alert("going up door is open at "+floornum + "floor"+" ");
+              document.write("^"+"</br>");
+              document.write("|"+"</br>");
+             document.write("ip door is open at "+floornum+" "+ "floor");
+         }else{
+           alert(floornum+" you entered is "+"invalid floor");
+         }
+      }
+    }else if(floornum == 0){
+        document.write("door is open at ground floor "+"<br>");
+    }else{
+      alert("invalid floor");
+      document.write("invalid floor");
+    }
+    </script>
+  </body>
+</html>

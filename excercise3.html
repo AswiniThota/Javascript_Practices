@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      var user = new Object();
+      user.accountNumber = "100020000A";
+      user.accName = "Aswini";
+      user.balance = 500;
+      user.emailId = "ashu@gmail.com";
+      user.phoneNumber = 1234567890;
+      let availableBal =user.balance;
+      let flag = true;
+      bankAction();
+      function bankAction(){
+        let action = +prompt(`which action you want to perform
+                        1.showBalance
+                        2.withdraw
+                        3.deposit
+                        4.fixedDeposit
+                        5.exit
+                        `);
+                        if(action != ""){
+                          if(action === 1){
+                            showBalance();
+                          }else if (action === 2) {let amount = +prompt("How much amount you want to withdraw");
+                           withdraw(amount);
+                          }else if (action === 3) {
+                            let depositAmt = +prompt("How much amount you want to deposit");
+                            deposit(depositAmt);
+                          }else if(action === 4){
+                            let fixedDepositAmt = +prompt("How much amount you want to fixed deposit");
+                            fixedDeposit(fixedDepositAmt);
+                          }else if(action == 5){
+                            flag = false;
+                          }else{
+                            document.write("<h1>invalid input</h1>");
+                          }
+                        }
+                      }
+            function showBalance(){
+              alert(`Your Balance is ${availableBal}`);
+              bankAction();
+            }
+            function withdraw(amount){
+              if(amount > 0 && amount > user.balance){
+                  alert("Insufficient Funds You cannot withdraw");
+              }else{
+                availableBal = user.balance - amount;
+                alert(`Hey ${user.accName} You have withdrawed amount ${amount} from your account ${user.accountNumber}
+                and currently your available balance is ${availableBal}`);
+              }
+              bankAction();
+            }
+            function deposit(depositAmt){
+              availableBal = availableBal + depositAmt;
+              alert(`Hey ${user.accName} you have successfully deposited ${depositAmt} Rupees in your account ${user.accountNumber} `);
+              bankAction();
+            }
+            function fixedDeposit(fixedDepositAmt){
+              if(fixedDepositAmt > availableBal && fixedDepositAmt > 0){
+                alert("Sorry You dont have enough funds to do fixed deposit");
+              }else{
+                alert(`Hey ${user.accName} you have fixed deposit of amount ${fixedDepositAmt} Rupees in your account ${user.accountNumber}`);
+                availableBal = availableBal - fixedDepositAmt;
+              }
+              bankAction();
+            }
+
+
+    </script>
+  </body>
+</html>

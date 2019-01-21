@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      h2{
+        margin-left:70%;
+        margin-top:-5%;
+        color:red;
+      }
+      body{
+        border:5px solid black;
+        text-align:center;
+      }
+      button{
+        width:20%;
+        height:10%;
+        margin-left:70%;
+        margin-top:0%;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <script>
+      //document.write("<h1>Registration and Login</h1>");
+      let flag = true;
+      let registration = [];
+      let userReg = {};
+      while(flag){
+        let chooseOpt = +prompt("1.Registration 2.Login 3.exit");
+        if(chooseOpt != ""){
+          if(chooseOpt === 1){
+            console.log("Registration");
+
+            let name = prompt("Enter Your Name");
+            let email = prompt("Enter Your Email");
+            let password = prompt("Enter Password");
+            let age = +prompt("Enter Your age");
+
+            userReg.name = name;
+            userReg.email = email;
+            userReg.password = password;
+            userReg.age = age;
+
+            console.log(userReg);
+            registration.push(userReg);
+            console.log(registration);
+          }
+          else if(chooseOpt === 2){
+            let lemail = prompt("i/p Email");
+            let lpassword = prompt("i/p Password");
+            for(var key in registration){
+              if((lemail == registration[key].email) && lpassword == registration[key].password){
+                let nme = registration[key].name;
+                document.write("<h1>Welcome to first Application</h1>");
+                document.write("<h2>");
+                document.write("Hey"+nme+" successfully signed in");
+                document.write("</h2>");
+                document.write("<button>Logout</button>");
+              }else{
+                document.write("invalid credentials");
+              }
+            }
+            flag = false;
+          }
+          else{
+            flag = false;
+            document.write("Bye Bye");
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

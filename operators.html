@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    body {
+      border: 3px solid black;
+      text-align: center;
+      color: green;
+    }
+
+    h1 {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: black;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Type of Operators</h1>
+  <script>
+    document.write("<h1>type of operator based on operands</h1>");
+    document.write("<h2>unary Operators</h2>");
+    let x = "20";
+    let y = 3;
+    let z = +x + y;
+    document.write("value of x is: ", x + "</br>");
+    document.write("value of x which is string: after conversion ", +x + "</br>");
+    document.write("typeof x is: ", typeof(x) + "</br>");
+    document.write("typeof +x is: ", typeof(+x) + "</br>");
+    document.write("<h2>Binary Operator</h2>");
+    document.write("value of z: " + z + "</br>");
+    document.write("typeof z: " + (typeof z));
+    document.write("<h2>ternary operator</h2>");
+    let flag = (+x == 20) ? " x value is equal to 20" : "not eqaul to 20";
+    document.write("o/p is:", flag);
+    document.write("<h1>type of operator based on operations</h1>");
+    document.write("<h2>Arithmetic Operator</h2>");
+    document.write("Addition: ", +x + y + "</br>");
+    document.write("subtraction: ", +x - y + "</br>");
+    document.write("Multiplication: ", +x * y + "</br>");
+    document.write("Division: ", +x / y + "</br>");
+    document.write("<h2>Logical Operators</h2>");
+    document.write("value of x: ", +x + "</br>");
+    document.write("value of y: ", +y + "</br>");
+    document.write("x > y && y < z: ", ((x > y) && (y < z)) + "</br>");
+    document.write("x > y || y > z: ", ((x > y) || (y > z)) + "</br>");
+    document.write("<h2>Comparision Operators</h2>");
+    document.write("value of x: ", +x + "</br>");
+    document.write("value of y: ", +y + "</br>");
+    document.write("greater than x > y: ", (+x > y) + "</br>");
+    document.write(" x < y: ", (+x < y) + "</br>");
+    document.write(" x >= y: ", (+x >= y) + "</br>");
+    document.write(" x <= y: ", (+x <= y) + "</br>");
+    document.write(" x == y: ", (x == y) + "</br>");
+    document.write(" x === y: ", (x === y) + "</br>");
+    document.write(" x != y: ", (x != y) + "</br>");
+    document.write("<h2>Increment/Decrement Operators</h2>");
+    document.write("prefix inc operator: ", ++y +"</br>");
+    document.write("value of y: " + y + "</br>");
+    document.write("postfix inc operator: ", y++ +"</br>");
+    document.write("value of y: " + y + "</br>");
+    document.write("prefix dec operator: ", --y +"</br>");
+    document.write("value of y: " + y + "</br>");
+    document.write("postfix dec operator: ", y-- +"</br>");
+    document.write("value of y: " + y + "</br>");
+    document.write("<h2>Conditional Operators</h2>");
+    var floornum = +prompt("which floor you want to go:");
+    if(floornum <= 5){
+    //  alert("up --- door is open at "+floornum + "floor");
+      document.write("up --- door is open at "+floornum+" "+ "floor");
+    }else{
+      //alert("invalid floor");
+      document.write("invalid floor");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>loops</title>
+</head>
+
+<body>
+  <script>
+    //while loop
+    let a = 1;
+    while (a < 10) {
+      console.log("while loop "+a);
+      a++;
+    }
+
+    //do while loop
+
+    do {
+      console.log("do while "+a);
+    } while (a < 10);
+
+    //for loop
+    for(let count = 0; count < 20;count++){
+      console.log("for loop "+count);
+    }
+
+    //2d
+    let fruits = ["appes","sapota","grapes"];
+    let flowers = ["rose","jasmine"];
+    let items = [fruits,flowers];
+    for(let oindex = 0 ; oindex < items.length; oindex++){
+      //console.log("oindex"+items[oindex]);
+      for(let iindex = 0 ; iindex < items[oindex].length;iindex++){
+        console.log(items[oindex][iindex]+"iindex");
+      }
+    }
+  </script>
+</body>
+
+</html>

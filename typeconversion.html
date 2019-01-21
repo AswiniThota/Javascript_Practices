@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        text-align:center;
+        font-family:arial;
+        color:blue;
+        border:3px solid black;
+      }
+      h1,h2{
+        color:green;
+        text-decoration:underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Type Conversion</h1>
+    <script>
+      "use script";
+      document.write("<h2>Number to String</h2>")
+      let num1 = 120;
+      document.write("value of num1: "+num1+"</br>");
+      var num1ToString = String(num1);
+      document.write("converting to string: "+num1ToString+"</br>");
+      document.write("typeof num1ToString: "+typeof num1ToString+"</br>");
+      document.write("<h2>Number to Boolean</h2>")
+      document.write("value of num1: "+num1+"</br>");
+      var num1ToBoolean = Boolean(num1);
+      document.write("converting to Boolean: "+num1ToBoolean+"</br>");
+      document.write("typeof num1ToBoolean: "+typeof num1ToBoolean+"</br>");
+      document.write("<h2>String to Other Possible Type[number,Boolean]</h2>");
+      let name = "Aswini";
+      let nameToString = Number(name);
+      let nameToBoolean = Boolean(name);
+      document.write("<h2>String to Number</h2>");
+      document.write("value of name: "+name+"</br>");
+      document.write("converting to Number:"+nameToString+"</br>");
+      document.write("typeof nameToString: "+typeof nameToString+"</br>");
+      document.write("<h2>String to Boolean</h2>");
+      document.write("value of name: "+name+"</br>");
+      document.write("converting to Boolean:"+nameToBoolean+"</br>");
+      document.write("typeof nameToBoolean: "+typeof nameToBoolean+"</br>");
+      document.write("<h2>Boolean to Other Possible Type[number,String]</h2>");
+      let flag1 = true;
+      let flag2 = false;
+      let flag1ToString = String(flag1);
+      let flag2ToString = String(flag2);
+      let flag1ToNumber = Number(flag1);
+      let flag2ToNumber = Number(flag2);
+      document.write("<h2>Boolean to Number</h2>");
+      document.write("value of flag1: "+flag1+"</br>");
+      document.write("value of flag1: "+flag2+"</br>");
+      document.write("converting to Number: "+flag1+"</br>");
+      document.write("converting to Number: "+flag2+"</br>");
+      document.write("typeof flag1ToNumber: "+typeof flag1ToNumber+"</br>");
+      document.write("typeof flag2ToNumber: "+typeof flag2ToNumber+"</br>");
+      document.write("<h2>Boolean to String</h2>");
+      document.write("value of flag1: "+flag1+"</br>");
+      document.write("value of flag1: "+flag2+"</br>");
+      document.write("converting to String flag1: "+flag1+"</br>");
+      document.write("converting to String flag2: "+flag2+"</br>");
+      document.write("typeof flag1ToString: "+typeof flag1ToString+"</br>");
+      document.write("typeof flag2ToString: "+typeof flag2ToString+"</br>");
+      document.write("<h2>undefined to Other Possible Type[number,String,Boolean]</h2>");
+      let demo;
+      let test = undefined;
+      let demoToNumber = Number(demo);
+      let demoToString = String(demo);
+      let demoToBoolean = Boolean(demo);
+      let demoToBoolean1 = Boolean(test);
+      document.write("<h2>Undefined to Number</h2>");
+      document.write("value of demo: "+demo+"</br>");
+      document.write("converting to Number demo: "+demoToNumber+"</br>");
+      document.write("typeof demoToNumber: "+typeof demoToNumber+"</br>");
+      document.write("<h2>Undefined to String</h2>");
+      document.write("value of demo: "+demo+"</br>");
+      document.write("converting to String demo: "+demoToString+"</br>");
+      document.write("typeof demoToString: "+typeof demoToString+"</br>");
+      document.write("<h2>Undefined to Boolean</h2>");
+      document.write("value of demo: "+demo+"</br>");
+      document.write("converting to Boolean demo: "+demoToBoolean+"</br>");
+      document.write("typeof demoToBoolean: "+typeof demoToBoolean+"</br>");
+      document.write("converting to Boolean test: "+demoToBoolean1+"</br>");
+      document.write("typeof demoToBoolean1: "+typeof demoToBoolean1+"</br>");
+      document.write("<h2>null to Other Possible Type[number,String,Boolean]</h2>");
+      let a = null;
+      let aToNumber = Number(a);
+      let aToString = String(a);
+      let aToBoolean = Boolean(a);
+      document.write("<h2>null to Number</h2>");
+      document.write("value of a: "+a+"</br>");
+      document.write("converting to Number a: "+aToNumber+"</br>");
+      document.write("typeof aToNumber: "+typeof aToNumber+"</br>");
+      document.write("<h2>null to String</h2>");
+      document.write("value of a: "+a+"</br>");
+      document.write("converting to String a: "+aToString+"</br>");
+      document.write("typeof aToString: "+typeof aToString+"</br>");
+      document.write("<h2>null to Boolean</h2>");
+      document.write("value of a: "+a+"</br>");
+      document.write("converting to Boolean a: "+aToBoolean+"</br>");
+      document.write("typeof aToBoolean: "+typeof aToBoolean+"</br>");
+    </script>
+  </body>
+</html>

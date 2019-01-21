@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    function showMsg(x) {
+      console.log("show msg func");
+      x();
+    }
+    function fabFunction(){
+      console.log("this is fab function");
+    }
+    showMsg(fabFunction);
+
+    //2nd example
+
+    let pizza = {
+      name:"veg paradise",
+      price:250,
+      size:"large"
+    };
+    let preparePizza = function(pizza,orderPizza){
+      orderPizza(pizza.name);
+      console.log(`prepare pizza ${pizza.name} of size ${pizza.size} `);
+    }
+    let orderPizza = (name) => {
+      console.log("Got a pizza ::",name);
+    }
+    preparePizza(pizza,orderPizza)
+  </script>
+</body>
+
+</html>

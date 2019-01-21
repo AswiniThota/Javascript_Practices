@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <form id="form">
+    <h1>Validation using Promises</h1>
+    <label>Name:</label><input type="text" name="username" id="username" value="">
+    <button onclick="myFunction()">Submit</button>
+  </form>
+  <script>
+    // "use script";
+    // let heading = document.createElement('h1');
+    // document.body.appendChild(heading);
+    // heading.innerText = "Validation using promises";
+    function myFunction(){
+    let userNamePromise = new Promise(function(resolve,reject){
+      let username = document.getElementById('username').value;
+      if(username != undefined && username != "" && username != null){
+        let divEle = document.createElement('div');
+        document.getElementById('form').remove();
+        document.body.appendChild(divEle);
+        divEle.innerText = "Hurray Successfully logged";
+        resolve(divEle.innerText);
+        status = divEle.innerText;
+        return status;
+      }else{
+        reject(alert("name field should not be empty"));
+        return "name field should not be empty";
+      }
+    })
+
+userNamePromise.then(function(status){
+      console.log(status);
+    }).catch(function(status){
+    console.log(status);
+    })
+  }
+
+  </script>
+</body>
+
+</html>
